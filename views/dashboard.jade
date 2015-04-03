@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+	head
+		title DateUp - Dashboard
+	body
+		h1= 'Hi ' + user.name + '!'
+		p= 'Your interests are:'
+			ul
+				each i in user.interests
+					li= i
+		p= 'Incoming DateUps:'
+			ul
+				each d in user.dateups
+					li= d
