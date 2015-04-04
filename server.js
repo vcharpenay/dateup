@@ -24,9 +24,38 @@ app.get('/', function(req, res) {
 app.get('/dashboard', function(req, res) {
 	var data = {
 		user: {
-			name: 'John Doe',
-			interests: ['cooking'],
-			dateups: []
+			name: 'Jaime Lannister',
+			interests: ['cooking','kill','sword fight'],
+			dateups: [
+              { date: "2015-04-15", //
+                interest: "cooking",
+                partner:{
+                  name: "Cersei Lannister",
+                  interests: ["cooking", "manipulate", "conspire"]
+                },
+
+              },{ date: "2015-04-16", //
+                interest: "sword fight",
+                partner:{
+                  name: "Arya Stark",
+                  interests: ["sword fight", "manipulate", "conspire"]
+                },
+
+              },{ date: "2015-04-17", //
+                interest: "cooking",
+                partner:{
+                  name: "Ygritte",
+                  interests: ["cooking", "manipulate", "conspire"]
+                },
+
+              },{ date: "2015-04-18", //
+                interest: "cooking",
+                partner:{
+                  name: "Hodor",
+                  interests: ["cooking", "manipulate", "conspire"]
+                },
+              }
+            ]
 		}
 	};
 	res.render('dashboard', data);

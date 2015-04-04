@@ -12,11 +12,13 @@ html
     #viewport
       ul.stack 
         div.bottom-stack That's it for today ! 
-        li.clubs 
-        li.diamonds 
-        li.hearts 
-        li.spades 
+        each i in user.dateups
+            li.clubs= i.partner.name 
 
+    
+    #userprofile= user.name 
+    
+    
 //doctype html
 //html(lang="en")
 //	head
@@ -32,3 +34,9 @@ html
 //			ul
 //				each d in user.dateups
 //					li= d
+
+//        each i in user.dateups
+//        li.clubs= i
+//        li.clubs 
+//        li.clubs 
+//        li.clubs 
