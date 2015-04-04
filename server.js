@@ -33,6 +33,7 @@ app.get('/dashboard', function(req, res) {
                 interest: "cooking",
                 partner:{
                   name: "Cersei Lannister",
+                  id: "001",
                   profilepic: 'http://graph.facebook.com/10153274755912193/picture?type=large&height=100&width=100',
                   interests: ["cooking", "manipulate", "conspire"]
                 },
@@ -41,6 +42,7 @@ app.get('/dashboard', function(req, res) {
                 interest: "sword fight",
                 partner:{
                   name: "Arya Stark",
+                  id: "002",
                   profilepic: 'http://graph.facebook.com/1018929571470220/picture?type=large&height=100&width=100',
                   interests: ["sword fight", "manipulate", "conspire"]
                 },
@@ -49,6 +51,7 @@ app.get('/dashboard', function(req, res) {
                 interest: "kill",
                 partner:{
                   name: "Ygritte",
+                  id: "003",
                   profilepic: 'http://graph.facebook.com/1040227932673094/picture?type=large&height=100&width=100',
                   interests: ["kill", "manipulate", "conspire"]
                 },
@@ -57,6 +60,7 @@ app.get('/dashboard', function(req, res) {
                 interest: "cooking",
                 partner:{
                   name: "Hodor",
+                  id: "004",
                   profilepic: 'http://graph.facebook.com/949685595062548/picture?type=large&height=100&width=100',
                   interests: ["cooking", "manipulate", "conspire"]
                 },

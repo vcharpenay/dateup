@@ -50,7 +50,12 @@ user-select: none;
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 */
 }
-
+#recommend-activity{
+    margin-top: 7px;
+}
+#recommend-date{
+    margin-top: 5px;
+}
 /*When grab the card*/
 #viewport li:active {
 /*    TODO: */

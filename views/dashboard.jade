@@ -5,6 +5,7 @@ html
     link(rel='stylesheet', href='/css/style-view.css')
     link(rel='stylesheet', href='/css/card-stack.css')
     link(rel='stylesheet', href='/css/animate.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
     script(src='/js/app-view.js')
     script(src='/js/swing.min.js')
     script(src='/js/classList.js')
@@ -14,18 +15,19 @@ html
       ul.stack 
         div.bottom-stack That's it for today ! 
         each i in user.dateups
-            li.clubs= i.partner.name
+            li(id='userid-'+i.partner.id)= i.partner.name
                 img#dateup-profilepic(src= i.partner.profilepic)
                 #recommend-activity Recommended Activity
                 span
-                b=i.interest
-                #recommend-date date
-                span
-                b=i.date
-                
-
+                    b=i.interest
+                #recommend-date
+                    i.fa.fa-calendar
+                    span=' ' + i.date
+                    
+    //#setting-button setting
     img#profile-image.animated.bounceInUp(src= user.profilepic) 
     #userprofile.animated.bounceInUp= user.name 
+    //#videocall-button video call
 
     
 //doctype html
