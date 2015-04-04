@@ -27,20 +27,53 @@ video {
   html { background: url(//demosthenes.info/assets/images/polina.jpg) #000 no-repeat center center fixed; }
   #bgvid { display: none; }
 }
-#dateup-name {
+#main-name {
     font-family: 'Pacifico', cursive;
     font-size: 80px;
+    left: 0;
+    line-height: 200px;
+    margin-top: -100px;
     position: absolute;
-    width: 100%;
     text-align: center;
-    top:36%;
+    top: 45%;
+    width: 100%;
     color: white;
-/*
-    width: 200px;
-    height: 200px;
-    top: 50%;
-    left: 50%;
-    margin-left: -50px;
-    margin-top: -50px; 
-*/
+    -webkit-user-select: none;   
+    -moz-user-select: none; 
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    cursor: default;
 }
+
+
+#main-join-button {
+    font-family: 'Helvetica Neue';
+    font-weight: 100;
+    letter-spacing: 0.3em;
+    color: white;
+    left: 0;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 63%;
+    width: 100%;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: s;
+}
+#main-join-border:hover{
+    background-color: white;
+    color: black;
+    font-weight: 400;
+}
+
+#main-join-border {
+    padding: 7px 30px 7px 30px;
+  border: solid 3px white;
+    cursor: pointer;
+        -webkit-user-select: none;   
+    -moz-user-select: none; 
+    text-decoration: none;
+    color: white;
+}
+
