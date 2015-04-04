@@ -68,6 +68,7 @@ app.get('/dashboard', function(req, res) {
                 interest: "cooking",
                 partner:{
                   name: "Tyrion",
+                    id: "005",
                   profilepic: 'http://graph.facebook.com/10202863700633898/picture?type=large&height=100&width=100',
                   interests: ["cooking", "manipulate", "conspire"]
                 },

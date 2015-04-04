@@ -56,6 +56,36 @@ user-select: none;
 #recommend-date{
     margin-top: 5px;
 }
+#state-mark-like{
+    display: none;
+/*    */
+/*  visibility: hidden;*/
+  position: absolute;
+  width: 100%;
+  font-size: 180px;
+/*  opacity: 0.6;*/
+  color: hotpink;
+  text-align: center;
+}
+#icon-like{
+  opacity: 0.6;
+}
+
+#state-mark-dislike{
+    display: none;
+/*    */
+/*  visibility: hidden;*/
+  position: absolute;
+  width: 100%;
+  font-size: 180px;
+/*  opacity: 0.6;*/
+  color: firebrick;
+  text-align: center;
+}
+#icon-dislike{
+  opacity: 0.6;
+}
+/*When grab the card*/
 /*When grab the card*/
 #viewport li:active {
 /*    TODO: */
