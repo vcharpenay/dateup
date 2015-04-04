@@ -22,6 +22,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/dashboard', function(req, res) {
+    //fake data for testing
 	var data = {
 		user: {
 			name: 'Jaime Lannister',
@@ -32,6 +33,7 @@ app.get('/dashboard', function(req, res) {
                 interest: "cooking",
                 partner:{
                   name: "Cersei Lannister",
+                  profilepic: 'http://graph.facebook.com/10153274755912193/picture?type=large&height=100&width=100',
                   interests: ["cooking", "manipulate", "conspire"]
                 },
 
@@ -39,20 +41,30 @@ app.get('/dashboard', function(req, res) {
                 interest: "sword fight",
                 partner:{
                   name: "Arya Stark",
+                  profilepic: 'http://graph.facebook.com/1018929571470220/picture?type=large&height=100&width=100',
                   interests: ["sword fight", "manipulate", "conspire"]
                 },
 
               },{ date: "2015-04-17", //
-                interest: "cooking",
+                interest: "kill",
                 partner:{
                   name: "Ygritte",
-                  interests: ["cooking", "manipulate", "conspire"]
+                  profilepic: 'http://graph.facebook.com/1040227932673094/picture?type=large&height=100&width=100',
+                  interests: ["kill", "manipulate", "conspire"]
                 },
 
               },{ date: "2015-04-18", //
                 interest: "cooking",
                 partner:{
                   name: "Hodor",
+                  profilepic: 'http://graph.facebook.com/949685595062548/picture?type=large&height=100&width=100',
+                  interests: ["cooking", "manipulate", "conspire"]
+                },
+              },{ date: "2015-04-18", //
+                interest: "cooking",
+                partner:{
+                  name: "Tyrion",
+                  profilepic: 'http://graph.facebook.com/10202863700633898/picture?type=large&height=100&width=100',
                   interests: ["cooking", "manipulate", "conspire"]
                 },
               }
