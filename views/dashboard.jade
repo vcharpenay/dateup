@@ -5,6 +5,7 @@ html
     link(rel='stylesheet', href='/css/style-view.css')
     link(rel='stylesheet', href='/css/card-stack.css')
     link(rel='stylesheet', href='/css/animate.css')
+    script(src='/js/app-view.js')
     script(src='/js/swing.min.js')
     script(src='/js/classList.js')
     script(src='/js/card-stack.js')
@@ -14,9 +15,10 @@ html
         div.bottom-stack That's it for today ! 
         each i in user.dateups
             li.clubs= i.partner.name
+                img#dateup-profilepic(src= user.profilepic) 
 
-    img#profile-image(src='http://graph.facebook.com/10152655669951297/picture?type=large&height=100&width=100') 
-    #userprofile= user.name 
+    img#profile-image.animated.bounceInUp(src= user.profilepic) 
+    #userprofile.animated.bounceInUp= user.name 
 
     
 //doctype html

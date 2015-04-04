@@ -8,14 +8,26 @@
   color: aliceblue;
     font-size: 24px;
   top: 48%;
+        -webkit-user-select: none;   
+    -moz-user-select: none; 
+}
+
+#dateup-profilepic{
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
 }
 
 #userprofile{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 23px;
     font-weight: 100;
     font-size: 27px;
     letter-spacing: 0.1em;
+        -webkit-user-select: none;   
+    -moz-user-select: none; 
 }
 
 #profile-image{
@@ -29,6 +41,8 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+        -webkit-user-select: none;   
+    -moz-user-select: none; 
 /*
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);

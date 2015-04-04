@@ -26,6 +26,7 @@ app.get('/dashboard', function(req, res) {
 		user: {
 			name: 'Jaime Lannister',
 			interests: ['cooking','kill','sword fight'],
+            profilepic: 'http://graph.facebook.com/10152655669951297/picture?type=large&height=100&width=100',
 			dateups: [
               { date: "2015-04-15", //
                 interest: "cooking",

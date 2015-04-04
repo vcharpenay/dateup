@@ -3,6 +3,7 @@ html, body, ul, li {
   padding: 0; }
 
 body {
+    overflow:hidden;
 /*    background: #f78579;*/
 /*  background: #FCD424;*/
   font: normal 16px/24px 'Helvetica Neue', Helvetica, Arial, freesans, sans-serif; }
@@ -36,7 +37,7 @@ input {
     height: 360px;
     background: #ED5D52;
     position: absolute;
-    top: 80px;
+    top: 70px;
     left: 50%;
     margin-left: -130px;
     border-radius: 10px; }
@@ -52,7 +53,7 @@ input {
     left: 0;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.2);
 /*    line-height: 300px;*/
-      line-height: 610px;
+/*      line-height: 610px;*/
     text-align: center;
 /*    font-size: 100px;*/
         font-family: 'Helvetica Neue';
