@@ -3,17 +3,9 @@
  */
 var dpd = require('deployd');
 
-var options = {
-	port: 8069,
-	db: {
-		port: 27017,
-		host: 'localhost',
-		name: 'dateup'
-	},
-	env: 'development'
-};
+var config = require('./config.js');
 
-var server = dpd(options);
+var server = dpd(config);
 
 server.listen();
 server.on('listening', function() {
