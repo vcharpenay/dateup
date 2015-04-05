@@ -1,0 +1,29 @@
+{
+	"type": "Collection",
+	"properties": {
+		"users": {
+			"name": "users",
+			"type": "array",
+			"typeLabel": "array",
+			"required": true,
+			"id": "users",
+			"order": 0
+		},
+		"date": {
+			"name": "date",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "date",
+			"order": 1
+		},
+		"interest": {
+			"name": "interest",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "interest",
+			"order": 2
+		}
+	}
+}

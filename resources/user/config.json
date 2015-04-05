@@ -1,0 +1,37 @@
+{
+	"type": "UserCollection",
+	"properties": {
+		"age": {
+			"name": "age",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "age",
+			"order": 0
+		},
+		"fbpic": {
+			"name": "fbpic",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "fbpic",
+			"order": 1
+		},
+		"girl": {
+			"name": "girl",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "girl",
+			"order": 2
+		},
+		"interests": {
+			"name": "interests",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "interests",
+			"order": 3
+		}
+	}
+}
