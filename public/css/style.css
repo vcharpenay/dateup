@@ -1,0 +1,122 @@
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
+body {
+  margin: 0;
+  background: #000; 
+}
+video { 
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+.stopfade { 
+   opacity: .5;
+}
+@media screen and (max-width: 500px) { 
+  div{width:70%;} 
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url(//demosthenes.info/assets/images/polina.jpg) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
+#main-name {
+    font-family: 'Pacifico', cursive;
+    font-size: 80px;
+    left: 0;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    width: 100%;
+    color: white;
+    -webkit-user-select: none;   
+    -moz-user-select: none; 
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    cursor: default;
+}
+
+
+#main-join-button {
+    font-family: 'Helvetica Neue';
+    font-weight: 100;
+    letter-spacing: 0.3em;
+    color: white;
+    left: 0;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 63%;
+    width: 100%;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: s;
+}
+#main-join-border:hover{
+/*    transition: background-color 0.5s ease;*/
+    background-color: white;
+    color: black;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+}
+
+#main-join-border {
+    padding: 7px 30px 7px 30px;
+  border: solid 3px white;
+    cursor: pointer;
+    -webkit-user-select: none;   
+    -moz-user-select: none; 
+    text-decoration: none;
+    color: white;
+}
+
+/* ngDialog stuff */
+
+.ngdialog.ngdialog-theme-custom {
+	padding-top: 125px;
+	padding-bottom: 125px;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-overlay {
+	background: rgba(255,255,255,.5);
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-content {
+	background: rgba(255,255,255,.9);
+	padding: 1.8em 2em;
+	width: 440px;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-message h2 {
+	font-size: 26px;
+	font-family: 'Montserrat', 'Helvetica', Arial, sans-serif;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-message {
+	font-size: 16px;
+	font-family: 'Source Sans Pro';
+	line-height: 22px;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-message ul {
+	padding: 0 0 5px 35px;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-button.ngdialog-button-primary {
+	background: #27ae60;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}

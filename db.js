@@ -2,10 +2,8 @@
  * Database access
  */
 var sqlite3 = require('sqlite3');
-var events = require('events');
 
 var db = new sqlite3.Database('dateup_db');
-var emitter = new events.EventEmitter();
 
 /**
  * 
@@ -31,7 +29,7 @@ function interests(userID, cb) {
  * @param cb cb('dateups', [id], [{interest, date}, ...])
  */
 function dateups(userID, cb) {
-	queryall('SELECT i.label AS label, d.date AS date FROM interest AS i, dateup as d WHERE i.id=d.interest AND (d.person_a=? OR d.person_b=?)', [userID, userID], cb, 'dateups', [userID]);
+	queryall('SELECT * FROM person AS p, interest AS i, dateup as d WHERE i.id=d.interest AND (d.person_a=? OR d.person_b=?)', [userID, userID], cb, 'dateups', [userID]);
 }
 
 function process(cb, event, params) {

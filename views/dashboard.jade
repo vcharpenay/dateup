@@ -1,14 +1,44 @@
 doctype html
-html(lang="en")
-	head
-		title DateUp - Dashboard
-	body
-		h1= 'Hi ' + user.name + '!'
-		p= 'Your interests are:'
-			ul
-				each i in user.interests
-					li= i
-		p= 'Incoming DateUps:'
-			ul
-				each d in user.dateups
-					li= d
+html
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='/css/style-view.css')
+    link(rel='stylesheet', href='/css/card-stack.css')
+    link(rel='stylesheet', href='/css/animate.css')
+    script(src='/js/app-view.js')
+    script(src='/js/swing.min.js')
+    script(src='/js/classList.js')
+    script(src='/js/card-stack.js')
+  body
+    #viewport
+      ul.stack 
+        div.bottom-stack That's it for today ! 
+        each i in user.dateups
+            li.clubs= i.partner.name
+                img#dateup-profilepic(src= user.profilepic) 
+
+    img#profile-image.animated.bounceInUp(src= user.profilepic) 
+    #userprofile.animated.bounceInUp= user.name 
+
+    
+//doctype html
+//html(lang="en")
+//	head
+//		title DateUp - Dashboard
+//	body
+//        
+//		h1= 'Hi ' + user.name + '!'
+//		p= 'Your interests are:'
+//			ul
+//				each i in user.interests
+//					li= i
+//		p= 'Incoming DateUps:'
+//			ul
+//				each d in user.dateups
+//					li= d
+
+//        each i in user.dateups
+//        li.clubs= i
+//        li.clubs 
+//        li.clubs 
+//        li.clubs 

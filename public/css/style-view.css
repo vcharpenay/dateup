@@ -1,0 +1,51 @@
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
+.bottom-stack{
+  text-align: center;
+  width: 100%;
+  font-family: 'Pacifico', cursive;
+  position: absolute;
+  color: aliceblue;
+    font-size: 24px;
+  top: 48%;
+        -webkit-user-select: none;   
+    -moz-user-select: none; 
+}
+
+#dateup-profilepic{
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+
+#userprofile{
+    text-align: center;
+    margin-top: 23px;
+    font-weight: 100;
+    font-size: 27px;
+    letter-spacing: 0.1em;
+        -webkit-user-select: none;   
+    -moz-user-select: none; 
+}
+
+#profile-image{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+    visibility: visible;
+    opacity:1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+        -webkit-user-select: none;   
+    -moz-user-select: none; 
+/*
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+*/
+}

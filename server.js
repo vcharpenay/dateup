@@ -22,12 +22,24 @@ app.get('/', function(req, res) {
 
 app.get('/dashboard', function(req, res) {
 	var id = req.query.id;
+	var data = {
+		user: {}
+	};
+	var next = function(fct, param, cb) {
+		fct(param, function(event, params, ret) {
+			cb(event, params, ret);
+		});
+	};
+	db.info(id, function(event, params, ret) {
+		
+	});
 	var cb = function(data, events) {
 		return function(event, params, ret) {
 			switch (event) {
 				case 'info':
 					data.user.name = ret.firstname + ' ' + ret.lastname;
 					data.user.age = ret.age;
+					data.user.profilepic = ret.pic;
 					break;
 				case 'interests':
 					data.user.interests = ret;
@@ -47,9 +59,6 @@ app.get('/dashboard', function(req, res) {
 			}
 		};
 	};
-	var data = {
-		user: {}	
-	};
 	var events = {
 		'info': false,
 		'interests': false,
@@ -61,4 +70,4 @@ app.get('/dashboard', function(req, res) {
 });
 
 app.listen(8069);
-console.log('server listening on port 8069...');
+console.log('listening on port 8069...');
