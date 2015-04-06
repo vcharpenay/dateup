@@ -1,6 +1,6 @@
 var app = angular.module('dateup', ['ngDialog']);
 
-window.ondragstart = function() { return false; } 
+window.ondragstart = function() { return false; }
 
 app.controller('ProfileController', function ($scope,$http,ngDialog) {
     console.log("Profile Controller loaded");
