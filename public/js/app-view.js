@@ -1,16 +1,59 @@
-//prevent dragging
+var app = angular.module('dateup', []);
+
 window.ondragstart = function() { return false; } 
 
-document.addEventListener('DOMContentLoaded', function () {
+app.controller('ProfileController', function ($scope,$http) {
+    console.log("Profile Controller loaded");
     var stack;
 
-    stack = gajus.Swing.Stack();
+    $scope.matches;
+    
+//    console.log($scope.currentUser);
+//    console.log($scope.user_profile_pic);
+    $scope.onLike = function(){
+        console.log("like !");
+    }
+    
+    $scope.onDislike = function(){
+        console.log("dislike !");
+    }
+    
+    $scope.onNeutral = function(){
+        console.log("")
+    }
+    
+    $scope.getMatches = function(){
+        console.log("here");
+          $http.get('http://dateup-charpi.rhcloud.com/user').
+            success(function(data, status, headers, config) {
+              $scope.matches = data;
+              $scope.$apply();
+              $scope.initiateStack();
+            }).
+            error(function(data, status, headers, config) {
+              // TODO : log error
+            });
+    }
+    
+    $scope.getMatches();
+        
+    $scope.initiateStack = function(){
+        
+        [].forEach.call(document.querySelectorAll('.stack li'), function (targetElement) {
+            stack.createCard(targetElement);
+            targetElement.classList.add('in-deck');
 
-    [].forEach.call(document.querySelectorAll('.stack li'), function (targetElement) {
-        stack.createCard(targetElement);
-
-        targetElement.classList.add('in-deck');
-    });
+        });
+    }
+    
+    
+    ////FOR SWING JS /////
+    //// Probably do the angular port ? ///// 
+    var config = {
+        minThrowOutDistance : 350,
+        maxThrowOutDistance : 400
+    };
+    stack = gajus.Swing.Stack(config);
 //    $('#state-mark').hide()
     stack.on('throwout', function (e) {
         console.log(e.target.innerText || e.target.textContent, 'has been thrown out of the stack to the', e.throwDirection == 1 ? 'right' : 'left', 'direction.');
@@ -18,11 +61,13 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(e);
         if(e.throwDirection == -1){
             //dislike
+            $scope.onDislike();
             $('#' + e.target.id).find('#state-mark-like').hide();
             $('#' + e.target.id).find('#state-mark-dislike').show();
         }else{
             //like
             console.log('Like !' + e.target.id)
+            $scope.onLike();
             $('#' + e.target.id).find('#state-mark-dislike').hide();
             $('#' + e.target.id).find('#state-mark-like').show();
         }
@@ -33,9 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(e.target.innerText || e.target.textContent, 'has been thrown into the stack from the', e.throwDirection == 1 ? 'right' : 'left', 'direction.');
         $('#' + e.target.id).find('#state-mark-like').hide();
         $('#' + e.target.id).find('#state-mark-dislike').hide();
+        $scope.onNeutral();
         //neutral the card
         e.target.classList.add('in-deck');
     });
-    
-    //do the like/unlike handler
 });
