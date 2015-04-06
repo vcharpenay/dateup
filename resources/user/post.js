@@ -3,7 +3,7 @@ dpd.user.get({
 	interests: {$in: this.interests}
 }, function(partners, err) {
 	if (err) {
-		error('user', err);
+		error('user', JSON.stringify(err));
 	} else {
 		for (var p in partners) {
 			var common = [];
@@ -14,15 +14,15 @@ dpd.user.get({
 				}
 			}
 			var idx = Math.floor(Math.random() * common.length);
-			var now = Date.now();
+			var now = new Date();
 			var nextWeek = new Date(now.getFullYear(), now.getMonth(), now.getDay() + 7);
 			dpd.dateup.post({
 				users: [this.id, partners[p].id],
-				date: nextWeek,
+				date: nextWeek.toDateString(),
 				interest: common[idx]
 			}, function(dateup, err) {
 				if (err) {
-					error('user', err);
+					error('user', JSON.stringify(err));
 				}
 			});
 		}

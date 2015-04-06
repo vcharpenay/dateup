@@ -1,13 +1,29 @@
 {
 	"type": "UserCollection",
 	"properties": {
+		"firstname": {
+			"name": "firstname",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "firstname",
+			"order": 0
+		},
+		"lastname": {
+			"name": "lastname",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "lastname",
+			"order": 1
+		},
 		"age": {
 			"name": "age",
 			"type": "number",
 			"typeLabel": "number",
 			"required": false,
 			"id": "age",
-			"order": 0
+			"order": 2
 		},
 		"fbpic": {
 			"name": "fbpic",
@@ -15,7 +31,7 @@
 			"typeLabel": "string",
 			"required": false,
 			"id": "fbpic",
-			"order": 1
+			"order": 3
 		},
 		"girl": {
 			"name": "girl",
@@ -23,7 +39,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "girl",
-			"order": 2
+			"order": 4
 		},
 		"interests": {
 			"name": "interests",
@@ -31,7 +47,7 @@
 			"typeLabel": "array",
 			"required": false,
 			"id": "interests",
-			"order": 3
+			"order": 5
 		}
 	}
 }
