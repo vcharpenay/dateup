@@ -1,6 +1,6 @@
 var app = angular.module('dateup', []);
 
-window.ondragstart = function() { return false; } 
+window.ondragstart = function() { return false; }
 
 app.controller('ProfileController', function ($scope,$http) {
     console.log("Profile Controller loaded");
