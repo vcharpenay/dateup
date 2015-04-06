@@ -17,8 +17,26 @@
 </head>
     
 <body ng-controller="MainCtrl">
+<!-- FB stuff -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1078869522129274',
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>    
     
-<video autoplay muted poster="http://www.pungme.com/public-content/posterbg.jpg" id="bgvid" loop>
+    <video autoplay muted poster="http://www.pungme.com/public-content/posterbg.jpg" id="bgvid" loop>
         <source src="http://www.pungme.com/public-content/hello3.webm" type="video/webm">
         <source src="http://www.pungme.com/public-content/hello3.mp4" type="video/mp4">
     </video>
@@ -28,22 +46,11 @@
         </div>
 
         <div id="main-join-button" class="animated fadeIn">
-            <a href="profile.html" id="main-join-border" ng-click="open()">
+            <a id="main-join-border" ng-click="facebookLogin()">
                 <i class="fa fa-facebook-official"></i> FACEBOOK
             </a>
         </div>
-    
-    
-        <script type="text/ng-template" id="firstDialog">
-			<div class="ngdialog-message">
-				<h2>Date up. Video dating made easy </h2>
-				<div>We take privacy very serious. All of your data will be fully protect... blah blah blah </div>
-
-			</div>
-			<div class="ngdialog-buttons mt">
-				<button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="next()">LOGIN WITH FACEBOOK</button>
-			</div>
-		</script>
 <!--    <div id="main-tagline"> Video dating made with <3</div>-->
 </body>
 </html>
+
