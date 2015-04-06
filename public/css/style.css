@@ -13,7 +13,7 @@ video {
   width: auto;
   height: auto;
   z-index: -100;
- background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+ background: url('http://www.pungme.com/public-content/posterbg.jpg') no-repeat;
   background-size: cover;
   transition: 1s opacity;
 }
@@ -24,7 +24,7 @@ video {
   div{width:70%;} 
 }
 @media screen and (max-device-width: 800px) {
-  html { background: url(//demosthenes.info/assets/images/polina.jpg) #000 no-repeat center center fixed; }
+  html { background: url(http://www.pungme.com/public-content/posterbg.jpg) #000 no-repeat center center fixed; }
   #bgvid { display: none; }
 }
 #main-name {
