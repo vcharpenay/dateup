@@ -1,104 +1,192 @@
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 
-.bottom-stack {
-	text-align: center;
-	width: 100%;
-	font-family: 'Pacifico', cursive;
-	position: absolute;
-	color: aliceblue;
-	font-size: 24px;
-	top: 48%;
-	-webkit-user-select: none;
-	-moz-user-select: none;
+.bottom-stack{
+  text-align: center;
+  width: 100%;
+  font-family: 'Pacifico', cursive;
+  position: absolute;
+  color: aliceblue;
+    font-size: 24px;
+  top: 48%;
+        -webkit-user-select: none;   
+    -moz-user-select: none; 
 }
 
-#dateup-profilepic {
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-	border-radius: 4px;
+#dateup-profilepic{
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
+    border-radius: 4px;
 }
 
-#userprofile {
-	text-align: center;
-	margin-top: 23px;
-	font-weight: 100;
-	font-size: 27px;
-	letter-spacing: 0.1em;
-	-webkit-user-select: none;
-	-moz-user-select: none;
+#user-name{
+    text-align: center;
+    margin-top: 23px;
+    font-weight: 100;
+    font-size: 27px;
+    letter-spacing: 0.1em;
+        -webkit-user-select: none;   
+    -moz-user-select: none; 
 }
 
-#profile-image {
-	width: 80px;
-	height: 80px;
-	border-radius: 40px;
+#profile-image{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
 	-webkit-border-radius: 40px;
 	-moz-border-radius: 40px;
-	visibility: visible;
-	opacity: 1;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	/*
-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
--webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
--moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    visibility: visible;
+    opacity:1;
+    margin-left: 15px;
+  margin-right: 15px;
+/*    display: block;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+        -webkit-user-select: none;   
+    -moz-user-select: none; 
+/*
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 */
 }
-
-#recommend-activity {
-	margin-top: 7px;
+#recommend-activity{
+    margin-top: 7px;
+}
+#recommend-date{
+    margin-top: 5px;
+}
+#state-mark-like{
+    display: none;
+/*    */
+/*  visibility: hidden;*/
+  position: absolute;
+  width: 100%;
+  font-size: 180px;
+/*  opacity: 0.6;*/
+  color: hotpink;
+  text-align: center;
+}
+#icon-like{
+  opacity: 0.6;
 }
 
-#recommend-date {
-	margin-top: 5px;
+#state-mark-dislike{
+    display: none;
+/*    */
+/*  visibility: hidden;*/
+  position: absolute;
+  width: 100%;
+  font-size: 180px;
+/*  opacity: 0.6;*/
+  color: firebrick;
+  text-align: center;
 }
-
-#state-mark-like {
-	display: none;
-	/* */
-	/* visibility: hidden;*/
-	position: absolute;
-	width: 100%;
-	font-size: 180px;
-	/* opacity: 0.6;*/
-	color: hotpink;
-	text-align: center;
-}
-
-#icon-like {
-	opacity: 0.6;
-}
-
-#state-mark-dislike {
-	display: none;
-	/* */
-	/* visibility: hidden;*/
-	position: absolute;
-	width: 100%;
-	font-size: 180px;
-	/* opacity: 0.6;*/
-	color: firebrick;
-	text-align: center;
-}
-
-#icon-dislike {
-	opacity: 0.6;
+#icon-dislike{
+  opacity: 0.6;
 }
 /*When grab the card*/
 /*When grab the card*/
 #viewport li:active {
-	
-} /* TODO: */
-/* box-shadow: 10px 10px 5px #888888;*/
+/*    TODO: */
+/*    box-shadow: 10px 10px 5px #888888;*/
 /*
-box-shadow: 7px 7px 46px rgba(0, 0, 0, 0.3);
--webkit-box-shadow: 7px 7px 46px rgba(0, 0, 0, 0.3);
--moz-box-shadow:7px 7px 46px rgba(0, 0, 0, 0.3);
+    box-shadow: 7px 7px 46px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 7px 7px 46px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:7px 7px 46px rgba(0, 0, 0, 0.3);
 */
-/* background-color: gainsboro;*/
+/*    background-color: gainsboro;*/
+    
+}
+#user-profile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 400px; */
+  text-align: center;
+  -webkit-user-select: none;   
+  -moz-user-select: none; 
+}
+
+#setting-button {
+    font-size: 32px;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    cursor: pointer;
+    color: darkgray;
+}
+
+#setting-button:hover {
+    color:coral;
+}
+
+#matches-button {
+    font-size: 32px;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    cursor: pointer;
+    color: darkgray;
+}
+
+#matches-button:hover {
+    color:coral;
+}
+#logout-button {
+        width: 9em;
+    height: 3em;
+    margin-top: 15px;
+    font-size: 14px;
+    color: aliceblue;
+/*    float: right;*/
+    border: 0px;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px #aaa;
+    transition: .5s, all .25s;
+    background-color: #588DEC;
+    outline: none;
+}
+
+#square-button {
+    font-family: 'Helvetica Neue';
+    font-weight: 100;
+    letter-spacing: 0.3em;
+    color: white;
+    left: 0;
+/*    line-height: 200px;*/
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+/*    top: 63%;*/
+    bottom: 20px;
+    width: 100%;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+}
+#square-border:hover{
+/*    transition: background-color 0.5s ease;*/
+    background-color: white;
+    color: black;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+}
+
+#square-border {
+    padding: 7px 30px 7px 30px;
+  border: solid 3px white;
+    cursor: pointer;
+    -webkit-user-select: none;   
+    -moz-user-select: none; 
+    text-decoration: none;
+    color: white;
+}
+
+.blur{
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+  opacity: 0.95;
+}

@@ -1,8 +1,8 @@
-var app = angular.module('dateup', []);
+var app = angular.module('dateup', ['ngDialog']);
 
 window.ondragstart = function() { return false; } 
 
-app.controller('ProfileController', function ($scope,$http) {
+app.controller('ProfileController', function ($scope,$http,ngDialog) {
     console.log("Profile Controller loaded");
     var stack;
 
@@ -23,7 +23,6 @@ app.controller('ProfileController', function ($scope,$http) {
     }
     
     $scope.getMatches = function(){
-        console.log("here");
           $http.get('http://dateup-charpi.rhcloud.com/user').
             success(function(data, status, headers, config) {
               $scope.matches = data;
@@ -46,6 +45,18 @@ app.controller('ProfileController', function ($scope,$http) {
         });
     }
     
+    $scope.openSettings = function () {
+        $('#main-view').addClass("blur");
+        ngDialog.open({
+            template: 'settingsTmpl.html',
+            controller: 'SettingsController',
+            className: 'ngdialog-theme-default',
+            showClose : false,
+            preCloseCallback: function(value) {
+                $('#main-view').removeClass("blur");
+            }
+        });
+    };
     
     ////FOR SWING JS /////
     //// Probably do the angular port ? ///// 
